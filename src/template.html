@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Indego Flows</title>
+    <title>Regional Rail</title>
     <meta
       name="viewport"
       content="initial-scale=1,maximum-scale=1,user-scalable=no"
@@ -90,7 +90,9 @@
         font-style: italic;
       }
       #legend-img {
-        max-width: 100%;
+        max-width: 75%;
+        margin-top: 5%;
+        margin-bottom: 5%;
       }
 
       @media only screen and (max-width: 600px) {
@@ -110,39 +112,17 @@
     <div id="map">
       <div id="headerblock">
         <div class="box-overlay">
-          <h1>Indego Flows</h1>
-          <hr />
-          <p>
-            Showing
-
-            <select name="directionality" id="directionality">
-              <option value="destinations" selected>outbound</option>
-              <option value="origins">inbound</option>
-              <option value="totalTrips">all</option>
-            </select>
-            trips for: <br />
-          </p>
-          <p id="station-name">Municipal Services Building Plaza</p>
-          <p id="station-id" style="display: none">3004</p>
-          <hr />
-          <p id="data-text">
-            <a href="https://www.rideindego.com/about/data/" target="_blank"
-              >Raw data provided by Indego / City of Philadelphia</a
-            >
-          </p>
-          <div id="screen-text">
-            <p>
-              Please view this map on a larger screen for the full experience.
-            </p>
+          <div style="text-align: center">
+            <h1>Regional Rail</h1>
+            <hr />
+            <img id="legend-img" src="img/logo.png" alt="Legend" />
           </div>
         </div>
-        <div id="infobox" class="box-overlay">
-          <img id="legend-img" src="img/logo.png" alt="Legend" />
-        </div>
+        <!-- <div id="infobox" class="box-overlay"></div> -->
       </div>
-      <div id="graph">
+      <!-- <div id="graph">
         <canvas id="myChart"></canvas>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>

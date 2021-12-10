@@ -8,7 +8,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 let indexConfig = new HtmlWebpackPlugin({
-  title: "testing 213123123123",
+  title: "Regional Rail",
   template: path.resolve(__dirname, "./src/template.html"),
   filename: "index.html",
   minify: {

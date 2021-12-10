@@ -1,0 +1,27 @@
+// import { urlRoot } from "./api";
+
+const data_sources = {
+  "traffic-stress-tiles": {
+    type: "vector",
+    url: "https://www.tiles.dvrpc.org/data/lts.json",
+    minzoom: 8,
+  },
+  //   indego: {
+  //     type: "geojson",
+  //     data: urlRoot + "indego/all",
+  //   },
+  //   "indego-query": {
+  //     type: "geojson",
+  //     data: urlRoot + "indego/trip-points/?q=3004",
+  //   },
+  "rr-lines-src": {
+    type: "geojson",
+    data: "https://opendata.arcgis.com/datasets/48b0b600abaa4ca1a1bacf917a31c29a_0.geojson",
+  },
+  "rr-stops-src": {
+    type: "geojson",
+    data: "https://opendata.arcgis.com/datasets/64eaa4539cf4429095c2c7bf25c629a2_0.geojson",
+  },
+};
+
+export { data_sources };
