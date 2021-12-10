@@ -6,7 +6,7 @@ const makeMap = () => {
     container: "map",
     style: "mapbox://styles/mapbox/streets-v10",
     center: [-75.16362, 39.95238],
-    zoom: 12,
+    zoom: 9.5,
   });
 };
 

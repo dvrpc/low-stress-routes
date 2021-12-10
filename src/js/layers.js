@@ -32,7 +32,7 @@ const map_layers = {
     // "source-layer": "existing_conditions_lts",
     layout: {},
     paint: {
-      "circle-radius": 10,
+      "circle-radius": 6,
       "circle-opacity": 0.7,
       "circle-color": "red",
     },
