@@ -1,0 +1,32 @@
+{
+  "name": "regional-rail",
+  "version": "1.0.0",
+  "description": "sandbox for some visualization concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronfraint/regional-rail.git"
+  },
+  "author": "Aaron Fraint, AICP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronfraint/regional-rail/issues"
+  },
+  "homepage": "https://github.com/aaronfraint/regional-rail#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.1.0",
+    "css-minimizer-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "terser-webpack-plugin": "^5.2.5",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  }
+}
