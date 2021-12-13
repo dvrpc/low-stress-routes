@@ -45,13 +45,14 @@ const map_layers = {
   },
   "selected-taz": {
     id: "selected-taz",
-    type: "fill",
+    type: "line",
     source: "taz-tiles",
     "source-layer": "TAZ_2010",
     layout: {},
     paint: {
-      "fill-opacity": 0.2,
-      "fill-color": "yellow",
+      "line-opacity": 0.8,
+      "line-width": 2,
+      "line-color": "black",
     },
     filter: ["==", "tazt", "-1"],
   },
