@@ -1,4 +1,25 @@
 const map_layers = {
+  destinations: {
+    id: "destinations",
+    type: "fill",
+    source: "destination-geojson",
+    layout: {},
+    paint: {
+      "fill-opacity": 0.7,
+      "fill-color": {
+        property: "trip_density",
+        default: "white",
+        stops: [
+          [0, "white"],
+          [0.00000003, "orange"],
+          [0.00030003, "red"],
+          [0.30000003, "blue"],
+          [1, "green"],
+        ],
+      },
+    },
+  },
+
   "taz-fill": {
     id: "taz-fill",
     type: "fill",
