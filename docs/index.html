@@ -77,6 +77,14 @@
         margin-top: 5%;
         margin-bottom: 5%;
       }
+      button {
+        margin-bottom: 5px;
+        border-radius: 5px;
+      }
+      .selected-button {
+        background-color: yellow;
+        display: none;
+      }
 
       @media only screen and (max-width: 600px) {
         #graph {
@@ -85,4 +93,4 @@
         #screen-text {
           display: inline;
         }
-      }</style><script defer="defer" src="main.bundle.js"></script></head><body><div id="map"><div id="headerblock"><div class="box-overlay"><div style="text-align: center"><h1>Regional Rail</h1><hr><img id="legend-img" src="img/logo.png" alt="Legend"></div></div></div></div></body></html>
+      }</style><script defer="defer" src="main.bundle.js"></script></head><body><div id="map"><div id="headerblock"><div class="box-overlay"><div style="text-align: center; margin-bottom: 10px"><h1>Regional Rail</h1><hr><img id="legend-img" src="img/logo.png" alt="Legend"><hr><button id="button-to-select-tazs">Select TAZs for flow analysis</button> <button id="button-to-clear-tazs" style="display: none">Clear selected TAZs</button> <button id="button-to-analyze-tazs" style="display: none">Show trip destinations from selected TAZs</button></div></div></div></div></body></html>

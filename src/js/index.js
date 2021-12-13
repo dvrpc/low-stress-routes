@@ -9,11 +9,16 @@ import { makeMap } from "./map";
 //   add_map_click_actions,
 // } from "./user_interaction";
 import { map_layers } from "./layers";
-
+import { wire_mouse_hover } from "./hover";
+import { wire_mouse_click } from "./click";
 const map = makeMap();
 
 map.on("load", function () {
   // Add map data sources and layer styling
   for (const src in data_sources) map.addSource(src, data_sources[src]);
   for (const lyr in map_layers) map.addLayer(map_layers[lyr]);
+
+  wire_mouse_hover(map);
+
+  wire_mouse_click(map);
 });

@@ -1,9 +1,9 @@
 // import { urlRoot } from "./api";
 
 const data_sources = {
-  "traffic-stress-tiles": {
+  "taz-tiles": {
     type: "vector",
-    url: "https://www.tiles.dvrpc.org/data/lts.json",
+    url: "https://www.tiles.dvrpc.org/data/taz-2010.json",
     minzoom: 8,
   },
   //   indego: {
