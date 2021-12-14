@@ -1,12 +1,14 @@
-import { API_ROOT } from "./api";
 import { Spinner } from "spin.js";
-let SELECTED_TAZS = [];
 
-const button_to_select_tazs = document.getElementById("button-to-select-tazs");
-const button_to_clear_tazs = document.getElementById("button-to-clear-tazs");
-const button_to_analyze_tazs = document.getElementById(
-  "button-to-analyze-tazs"
-);
+import { API_ROOT } from "./api";
+
+import {
+  button_to_select_tazs,
+  button_to_clear_tazs,
+  button_to_analyze_tazs,
+} from "./dom";
+
+let SELECTED_TAZS = [];
 
 const return_to_initial_state = (map) => {
   button_to_select_tazs.classList.remove("selected-button");
