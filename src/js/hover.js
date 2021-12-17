@@ -1,4 +1,10 @@
-import { add_popup_to_map, clear_popups } from "./popups";
+import {
+  button_to_select_start,
+  button_to_select_end,
+  button_to_find_route,
+  remove_selection_on_button,
+  button_is_selected,
+} from "./dom";
 
 const use_pointer_when_hovering = (map, layername) => {
   /**
@@ -11,11 +17,13 @@ const use_pointer_when_hovering = (map, layername) => {
    */
 
   // change mouse tip to pointer finger
-  map.on(
-    "mouseenter",
-    layername,
-    () => (map.getCanvas().style.cursor = "pointer")
-  );
+  map.on("mouseenter", layername, function (e) {
+    if (
+      button_is_selected(button_to_select_start) ||
+      button_is_selected(button_to_select_end)
+    )
+      map.getCanvas().style.cursor = "pointer";
+  });
 
   // change mouse tip upon leaving feature
   map.on("mouseleave", layername, function (e) {
@@ -23,23 +31,23 @@ const use_pointer_when_hovering = (map, layername) => {
   });
 };
 
-const add_popup_to_destination = (map) => {
-  map.on("mousemove", "destinations", (e) => {
-    clear_popups();
-    let msg =
-      "<h1> TAZ #" +
-      e.features[0].properties.tazt +
-      "</h1><hr><ul><li>" +
-      e.features[0].properties.total_trips +
-      " trips</li><li>" +
-      e.features[0].properties.trip_density +
-      " density</li></ul>";
-    add_popup_to_map(map, msg, e);
-  });
-  map.on("mouseleave", "destinations", () => {
-    clear_popups();
-  });
-};
+// const add_popup_to_destination = (map) => {
+//   map.on("mousemove", "destinations", (e) => {
+//     clear_popups();
+//     let msg =
+//       "<h1> TAZ #" +
+//       e.features[0].properties.tazt +
+//       "</h1><hr><ul><li>" +
+//       e.features[0].properties.total_trips +
+//       " trips</li><li>" +
+//       e.features[0].properties.trip_density +
+//       " density</li></ul>";
+//     add_popup_to_map(map, msg, e);
+//   });
+//   map.on("mouseleave", "destinations", () => {
+//     clear_popups();
+//   });
+// };
 
 const wire_mouse_hover = (map) => {
   /**
@@ -47,11 +55,11 @@ const wire_mouse_hover = (map) => {
    *
    * @param {mapboxgl.Map} map - The map object for the page
    */
-  var layers = ["taz-fill"];
+  var layers = ["nodes"];
 
   layers.forEach((lyr) => use_pointer_when_hovering(map, lyr));
 
-  add_popup_to_destination(map);
+  // add_popup_to_destination(map);
 };
 
 export { wire_mouse_hover };
