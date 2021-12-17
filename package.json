@@ -1,5 +1,5 @@
 {
-  "name": "regional-rail",
+  "name": "lowstress-prototype",
   "version": "1.0.0",
   "description": "sandbox for some visualization concepts",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronfraint/regional-rail.git"
+    "url": "git+https://github.com/aaronfraint/lowstress-prototype.git"
   },
   "author": "Aaron Fraint, AICP",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aaronfraint/regional-rail/issues"
+    "url": "https://github.com/aaronfraint/lowstress-prototype/issues"
   },
-  "homepage": "https://github.com/aaronfraint/regional-rail#readme",
+  "homepage": "https://github.com/aaronfraint/lowstress-prototype#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^10.1.0",
