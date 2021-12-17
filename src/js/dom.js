@@ -1,7 +1,22 @@
-const button_to_select_tazs = document.getElementById("button-to-select-tazs");
-const button_to_clear_tazs = document.getElementById("button-to-clear-tazs");
-const button_to_analyze_tazs = document.getElementById(
-  "button-to-analyze-tazs"
+const button_to_select_start = document.getElementById(
+  "button-to-select-start"
 );
+const button_to_select_end = document.getElementById("button-to-select-end");
+const button_to_find_route = document.getElementById("button-to-find-route");
 
-export { button_to_select_tazs, button_to_clear_tazs, button_to_analyze_tazs };
+const button_is_selected = (button) => {
+  return button.classList.contains("selected-button");
+};
+
+const remove_selection_on_button = (button) => {
+  if (button_is_selected(button)) {
+    button.classList.remove("selected-button");
+  }
+};
+export {
+  button_to_select_start,
+  button_to_select_end,
+  button_to_find_route,
+  remove_selection_on_button,
+  button_is_selected,
+};
