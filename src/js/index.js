@@ -11,6 +11,7 @@ import { makeMap } from "./map";
 import { map_layers } from "./layers";
 import { wire_mouse_hover } from "./hover";
 import { wire_mouse_click } from "./click";
+import { paint_props } from "./paint_props";
 const map = makeMap();
 
 map.on("load", function () {
@@ -21,4 +22,12 @@ map.on("load", function () {
   wire_mouse_hover(map);
 
   wire_mouse_click(map);
+
+  // Load scale-based paint properties
+  for (const paint in paint_props)
+    map.setPaintProperty(
+      paint_props[paint].id,
+      paint_props[paint].attribute,
+      paint_props[paint].style
+    );
 });
