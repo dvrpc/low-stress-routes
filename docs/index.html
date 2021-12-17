@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8"><title>Regional Rail</title><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"><link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet"><script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script><style>body {
+<!doctype html><html><head><meta charset="utf-8"><title>Low-Stress Routes</title><meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"><link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet"><script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script><style>body {
         margin: 0;
         padding: 0;
       }
@@ -25,65 +25,54 @@
         position: absolute;
         top: 2%;
         left: 2%;
-        width: 18vw;
+        width: 30vw;
         min-width: 120px;
-        max-width: 250px;
         z-index: 1;
       }
 
-      /* #infoblock {
-            position: absolute;
-            top: 10%;
-            left: 2%;
-            z-index: 2;
-        } */
-
-      #graph {
-        position: absolute;
-        width: 20vw;
-        height: 90vh;
-        bottom: 5%;
-        right: 2%;
-        z-index: 1;
-        background-color: rgba(255, 255, 255, 0.9);
-        box-shadow: 2px 2px 8px 8px rgba(0, 0, 0, 0.3);
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
 
-      #station-name {
-        font-weight: bold;
-        text-align: center;
-        font-size: 110%;
-      }
-
-      #station-address {
-        text-transform: capitalize;
-        font-style: italic;
-        text-align: center;
-        font-size: 80%;
-      }
-      #data-text {
-        font-size: 75%;
-      }
-
-      hr {
-        color: white;
-      }
-      #screen-text {
-        display: none;
-        font-style: italic;
-      }
       #legend-img {
-        max-width: 75%;
-        margin-top: 5%;
-        margin-bottom: 5%;
+        max-width: 150px;
+        margin: 16px;
       }
+      #logo {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        width: 200px;
+        z-index: 1;
+      }
+
       button {
-        margin-bottom: 5px;
+        margin: 5px;
         border-radius: 5px;
+        width: 80%;
+
+        background-color: white;
+        color: black;
+        border: 2px solid blueviolet;
+        cursor: pointer;
+        min-height: 50px;
       }
+      button:hover {
+        color: blueviolet;
+        font-weight: bold;
+      }
+      hr {
+        color: blueviolet;
+      }
+
       .selected-button {
         background-color: yellow;
-        display: none;
+      }
+      #button-box {
+        display: flex;
+        padding: 5px;
       }
       @keyframes spinner-line-fade-more {
         0%,
@@ -131,10 +120,4 @@
       }
 
       @media only screen and (max-width: 600px) {
-        #graph {
-          display: none;
-        }
-        #screen-text {
-          display: inline;
-        }
-      }</style><script defer="defer" src="main.bundle.js"></script></head><body><div id="map"><div id="foo"></div><div id="headerblock"><div class="box-overlay"><div style="text-align: center; margin-bottom: 10px"><h1>Regional Rail</h1><hr><img id="legend-img" src="img/logo.png" alt="Legend"><hr><button id="button-to-select-tazs">Select TAZs for flow analysis</button> <button id="button-to-clear-tazs" style="display: none">Clear selected TAZs</button> <button id="button-to-analyze-tazs" style="display: none">Show trip destinations from selected TAZs</button></div></div></div></div></body></html>
+      }</style><script defer="defer" src="main.bundle.js"></script></head><body><div id="map"><div id="spinner"></div><div id="headerblock"><div class="box-overlay"><div><div class="flex"><div><h1>Low-Stress<br>Route Planner<br></h1></div><div style="text-align: right; max-width: 40%"><p>Prototype, v0.1<br><a href="https://github.com/aaronfraint/lowstress-prototype">frontend</a><br><a href="https://github.com/aaronfraint/low-stress-bike-routing">backend</a></p></div></div><hr><div id="button-box"><button id="button-to-select-start">Select the start point of the trip</button> <button id="button-to-select-end">Select the end point of the trip</button></div><hr><div style="text-align: center"><button id="button-to-find-route">Find lowest-stress route!</button></div></div></div></div><div id="logo"><img id="legend-img" src="img/logo.png" alt="Legend"></div></div></body></html>
