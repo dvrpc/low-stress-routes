@@ -1,5 +1,5 @@
 ---
-name: Deploy dev branch to dokku
+name: Deploy dev to dokku
 on:
   push:
     branches:
